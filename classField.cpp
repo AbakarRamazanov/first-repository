@@ -2,7 +2,6 @@
 #include "hpp/classCoordinates.hpp"
 #include "hpp/classField.hpp"
 
-
 Field::Field():
 				LU(5,5),
 				RD(rlutil::tcols()-5,rlutil::trows()-5)

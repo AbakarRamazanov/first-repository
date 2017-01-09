@@ -1,22 +1,25 @@
 #include "classCoordinates.hpp"
-#include <list>
 
-#ifndef CLASSFIELD_HPP
-#define CLASSFIELD_HPP
+#ifndef CLASSSNAKE_HPP
+#define CLASSSNAKE_HPP
+
+struct Body
+{
+	int X;
+	int Y;
+};
 
 class Snake
 {
 public:
+	Snake();
 	void Draw();
+	void Draw_Erase();
+	void Replace(int X, int Y);
 //private:
-	struct rotation
-	{
-		int count;
-		int rotation;
-	};
-	list<rotation> turn;
-	int  direction;
-}
+	Body BD[7];
+};
 
 
-#endif CLASSFIELD_HPP
+
+#endif CLASSSNAKE_HPP
