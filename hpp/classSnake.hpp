@@ -15,6 +15,7 @@ public:
 	Snake();
 	void Draw();
 	void Draw_Erase();
+	void ReInit();
 	void Replace(int X, int Y);
 //private:
 	Body BD[7];

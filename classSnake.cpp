@@ -16,13 +16,24 @@ void Snake::Replace(int X, int Y)
 void Snake::Draw()
 {
 	rlutil::locate(BD[6].X,BD[6].Y);
-	std::cout << "*";
+	std::cout << "O";
 }
 
 void Snake::Draw_Erase()
 {
 	rlutil::locate(BD[0].X,BD[0].Y);
 	std::cout << " ";
+}
+
+void Snake::ReInit()
+{
+	BD[6].X = ( rlutil::tcols() - 10 ) / 2;
+	BD[6].Y = ( rlutil::trows() - 10 ) / 2;
+	for(int i(5);i>=0;i--)
+	{
+		BD[i].X=BD[i+1].X-1;
+		BD[i].Y=BD[i+1].Y;
+	}
 }
 
 Snake::Snake()
