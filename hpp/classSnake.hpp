@@ -19,6 +19,7 @@ public:
 	void ReInit();
 	void Replace(int X, int Y);
 	bool Check(Field *F);
+	bool Eat(int X, int Y);
 //private:
 	Body BD[7];
 };

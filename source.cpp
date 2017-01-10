@@ -1,5 +1,7 @@
 #include "../rlutil.h"
 #include <thread>
+#include <cstdlib>
+#include <ctime>
 #include "hpp/classCoordinates.hpp"
 #include "hpp/classField.hpp"
 #include "hpp/classSnake.hpp"
@@ -12,7 +14,7 @@
 Field GameField;
 Snake Python;
 int Direction = RIGHT;
-
+int X=0,Y=0;
 void Func_Direction();
 void Func_Move();
 
@@ -20,6 +22,10 @@ int main()
 {   
     rlutil::cls();
 	GameField.Draw();
+	X = 15;
+	Y = 15;
+	rlutil::locate(X,Y);
+	std::cout << "+";
 	Direction = RIGHT;
     int DefaultColor = rlutil::saveDefaultColor();
 	rlutil::hidecursor();
@@ -115,7 +121,14 @@ void Func_Move()
 				break;
 			}
 		}
-		if( !( Python.Check( &GameField ) ) )
+		if ( ! ( Python.Eat (X,Y) ) )
+		{
+			X = rand() % (GameField.RD.X - 5) + 5;
+			Y = rand() % (GameField.RD.Y - 5) + 5;
+			rlutil::locate(X,Y);
+			std::cout << "+";
+		}			
+		if ( !( Python.Check( &GameField ) ) )
 		{
 			rlutil::resetColor();
 			rlutil::showcursor();

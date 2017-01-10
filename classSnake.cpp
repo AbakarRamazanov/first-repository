@@ -2,6 +2,15 @@
 #include "hpp/classField.hpp"
 #include "hpp/classSnake.hpp"
 
+bool Snake::Eat(int X, int Y)
+{
+	if ( BD[6].X == X && BD[6].Y == Y) 
+	{
+		return false;
+	}
+	return true;
+}
+
 bool Snake::Check(Field *F)
 {
 	for(int i(0);i<6;i++)
