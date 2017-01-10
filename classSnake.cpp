@@ -1,6 +1,25 @@
 #include "../rlutil.h"
+#include "hpp/classField.hpp"
 #include "hpp/classSnake.hpp"
 
+bool Snake::Check(Field *F)
+{
+	for(int i(0);i<6;i++)
+	{
+		if ( ( BD[6].X == BD[i].X ) && ( BD[6].Y == BD[i].Y ) ) 
+		{
+			return false;
+		}
+	}
+	if ( ( BD[6].X == F->LU.X ) || 
+		 ( BD[6].X == F->RD.X ) ||
+		 ( BD[6].Y == F->LU.Y ) || 
+		 ( BD[6].Y == F->RD.Y ) )
+	{
+		return false;
+	}
+	return true;
+}
 
 void Snake::Replace(int X, int Y)
 {

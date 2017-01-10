@@ -115,5 +115,12 @@ void Func_Move()
 				break;
 			}
 		}
+		if( !( Python.Check( &GameField ) ) )
+		{
+			rlutil::resetColor();
+			rlutil::showcursor();
+			rlutil::cls();
+			exit(0);
+		}
 	}
 }

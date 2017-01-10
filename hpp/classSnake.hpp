@@ -1,4 +1,5 @@
 #include "classCoordinates.hpp"
+#include "classField.hpp"
 
 #ifndef CLASSSNAKE_HPP
 #define CLASSSNAKE_HPP
@@ -17,6 +18,7 @@ public:
 	void Draw_Erase();
 	void ReInit();
 	void Replace(int X, int Y);
+	bool Check(Field *F);
 //private:
 	Body BD[7];
 };
