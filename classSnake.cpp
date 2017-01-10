@@ -1,4 +1,4 @@
-#include "../rlutil.h"
+#include "rlutil/rlutil.h"
 #include "hpp/classField.hpp"
 #include "hpp/classSnake.hpp"
 

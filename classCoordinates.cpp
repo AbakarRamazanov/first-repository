@@ -1,4 +1,4 @@
-#include "../rlutil.h"
+#include "rlutil/rlutil.h"
 #include "hpp/classCoordinates.hpp"
 
 int Coordinates::get_X()
