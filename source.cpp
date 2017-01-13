@@ -90,7 +90,7 @@ void Func_Move()
 		{
 			case UP : 
 			{
-				rlutil::msleep(50);
+				rlutil::msleep(85);
 				Python.Draw_Erase();
 				Python.Replace(0,-1);
 				Python.Draw();
@@ -98,7 +98,7 @@ void Func_Move()
 			}
 			case DOWN :
 			{
-				rlutil::msleep(50);
+				rlutil::msleep(85);
 				Python.Draw_Erase();
 				Python.Replace(0,1);
 				Python.Draw();
@@ -106,7 +106,7 @@ void Func_Move()
 			}
 			case LEFT :
 			{
-				rlutil::msleep(35);
+				rlutil::msleep(70);
 				Python.Draw_Erase();
 				Python.Replace(-1,0);
 				Python.Draw();
@@ -114,7 +114,7 @@ void Func_Move()
 			}
 			case RIGHT :
 			{
-				rlutil::msleep(35);
+				rlutil::msleep(70);
 				Python.Draw_Erase();
 				Python.Replace(1,0);
 				Python.Draw();
